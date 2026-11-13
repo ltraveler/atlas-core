@@ -25,10 +25,10 @@ This repository follows the official Ansible role-based monorepo layout. Your co
 ```mermaid
 graph TD
     A[Control Node/ Your Laptop] -->|SSH + Ansible| B(Target Server/VM)
-    B --> C[Role: common<br/>Security, Firewall & Base Packages]
-    B --> D[Role: docker<br/>Container Runtime]
-    B --> E[Role: gitlab<br/>Self-Hosted Git & CI/CD]
-    B --> F[Role: confluence<br/>Team Wiki & Docs]
+    B --> C[Role: bedrock-common<br/>Security, Firewall & Base Packages]
+    B --> D[Role: vessel-docker<br/>Container Runtime]
+    B --> E[Role: forge-gitlab<br/>Self-Hosted Git & CI/CD]
+    B --> F[Role: archive-confluence<br/>Team Wiki & Docs]
 ```
 
 ---
@@ -39,10 +39,11 @@ graph TD
 .
 ├── ansible.cfg              # Global Ansible behavior and inventory defaults
 ├── requirements.yml         # External community roles and collections
-├── inventory/               # Server definitions and environment variables
-│   ├── hosts.yml            # Target server IPs and groups
-│   ├── group_vars/          # Shared settings and encrypted Ansible Vault secrets
-│   └── host_vars/           # Server-specific overrides
+├── inventories/             # Server definitions and environment variables
+│   ├── production/
+    │   ├── hosts.yml            # Target server IPs and groups
+    │   ├── group_vars/          # Shared settings and encrypted Ansible Vault secrets
+    │   └── host_vars/           # Server-specific overrides
 ├── playbooks/               # Entrypoints to deploy all or single services
 │   ├── site.yml             # Master playbook for the entire infrastructure
 │   ├── gitlab.yml           # Standalone GitLab deployment
