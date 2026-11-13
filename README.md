@@ -8,13 +8,13 @@
 
 ## 🎯 Purpose of This Project
 
-Setting up self-hosted infrastructure from scratch can feel overwhelming. I created **Atlas Core** as an educational, real-world reference to demonstrate how anyone—from a homelab enthusiast to a small company, can deploy and run their own independent software stack using **Infrastructure-as-Code (IaC)**.
+Setting up self-hosted infrastructure from scratch can feel overwhelming. I created **Atlas Core** as an educational, real-world reference to demonstrate how anyone-from a homelab enthusiast to a small company, can deploy and run their own independent software stack using **Infrastructure-as-Code (IaC)**.
 
 Instead of clicking through manual setup wizards or maintaining messy shell scripts, this repository shows how to:
 * **Build from Zero:** Transform bare Linux servers into a structured, reliable environment
 * **Self-Host Enterprise Tools:** Easily deploy and integrate popular services like **GitLab**, **Confluence**, and containerized applications
 * **Scale Cleanly:** Add new subprojects as modular, plug-and-play Ansible roles without breaking existing services
-* **Follow Production Standards:** Apply real-world DevOps practices—including secret encryption, idempotency, and automated linting—on a small-team or personal budget
+* **Follow Production Standards:** Apply real-world DevOps practices-including secret encryption, idempotency, and automated linting-on a small-team or personal budget
 
 ---
 
@@ -24,7 +24,7 @@ This repository follows the official Ansible role-based monorepo layout. Your co
 
 ```mermaid
 graph TD
-    A[Control Node/ Your Laptop] →|SSH + Ansible| B(Target Server/VM)
+    A[Control Node/ Your Laptop] -->|SSH + Ansible| B(Target Server/VM)
     B --> C[Role: common<br/>Security, Firewall & Base Packages]
     B --> D[Role: docker<br/>Container Runtime]
     B --> E[Role: gitlab<br/>Self-Hosted Git & CI/CD]
