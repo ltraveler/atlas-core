@@ -1,0 +1,22 @@
+name: Ansible Lint
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  lint:
+    name: Run ansible-lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
+        with:
+          python_version: "3.14"
