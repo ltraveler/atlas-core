@@ -1,0 +1,13 @@
+---
+# Global Infrastructure Settings
+atlas_core_domain: "myinfra.local"
+atlas_core_timezone: "UTC"
+
+# Admin Account Configuration
+atlas_core_admin_user: "atlasdmn"
+atlas_core_ssh_port: 20135
+
+# Subproject Toggles & Ports
+gitlab_domain: "git.{{ atlas_core_domain }}"
+confluence_domain: "wiki.{{ atlas_core_domain }}"
+

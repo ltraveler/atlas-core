@@ -1,0 +1,24 @@
+# Ansible temporary and retry files
+*.retry
+.ansible/
+
+# Unencrypted vault password files
+.vault_pass
+.vault_pass.txt
+vault_pass*
+
+# Python venv and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

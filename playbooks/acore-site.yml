@@ -1,0 +1,11 @@
+---
+- name: Provision Atlas Core Ingress Node
+  hosts: all
+  become: true
+
+  roles:
+    - role: aegis_common
+      tags: common
+    - role: gateway_nginx
+      tags: nginx
+
